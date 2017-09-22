@@ -1,0 +1,11 @@
+{
+  "name": "brucebot",
+  "version": "1.0.0",
+  "description": "GroupMe bot ",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "author": "",
+  "license": "ISC"
+}

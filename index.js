@@ -2,7 +2,12 @@ const Hapi = require('hapi');
 const bot = require('./handlers/bot');
 const gifs = require('./handlers/gifs');
 
-const server = new Hapi.Server(~~process.env.PORT || 3000, '0.0.0.0');
+const server = new Hapi.Server();
+
+server.connection({
+  port: ~~process.env.PORT || 3000,
+  host: '0.0.0.0'
+});
 
 server.register(require('inert'), (err) => {
   if (err) {

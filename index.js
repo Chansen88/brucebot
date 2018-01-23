@@ -5,8 +5,8 @@ const gifs = require('./handlers/gifs');
 const server = new Hapi.Server();
 
 server.connection({
-  port: 3000,
-  host: 'localhost',
+  port: 8080,
+  host: 'badboybruce.herokuapp.com'
 });
 
 server.register(require('inert'), (err) => {

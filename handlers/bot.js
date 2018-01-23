@@ -5,7 +5,7 @@ const bruceRegex = /\/bruce/i;
 async function respond(request, reply) {
   try {
     const { text } = request.payload;
-    if (!text || bruceRegex.test(text)) return reply();
+    if (!text || !bruceRegex.test(text)) return;
     const searchString = text.split(' ').join('+');
     const body = await getGifs(search);
     const { data, meta } = JSON.parse(body);

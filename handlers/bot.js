@@ -1,5 +1,5 @@
 const { postMessage } = require('../libs/groupMe');
-const getGifs = require('../libs/giphys');
+const { getGifs } = require('../libs/giphys');
 const bruceRegex = /\/bruce/i;
 
 async function respond(request, reply) {

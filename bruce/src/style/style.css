@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'BoomVille';
+    src: url('./Boomville-Regular.woff2') format('woff2')
+}
+
+@font-face {
+    font-family: 'Fairview';
+    src: url('./Fairview-Regular.woff2') format('woff2')
+}

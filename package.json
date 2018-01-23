@@ -4,8 +4,15 @@
   "description": "GroupMe bot ",
   "main": "index.js",
   "scripts": {
-    "test": ""
+    "test": "",
+    "start": "node_modules/.bin/nodemon index.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "hapi": "^16.6.0",
+    "inert": "^4.2.1",
+    "node-env-file": "^0.1.8",
+    "nodemon": "^1.12.1"
+  }
 }

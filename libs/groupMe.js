@@ -1,6 +1,6 @@
 const https = require("https");
-const env = require('node-env-file');
-env(__dirname + '/../.env');
+// const env = require('node-env-file');
+// env(__dirname + '/../.env');
 
 const botID = process.env.BOT_ID;
 

@@ -6,7 +6,7 @@ async function respond(request, reply) {
   try {
     const { text } = request.payload;
     if (!text || !bruceRegex.test(text)) return reply();
-    const searchString = text.split(' ').join('+');
+    const searchString = text.replace(bruceRegex, '').split(' ').join('+');
     const body = await getGifs(searchString);
     const { data, meta } = JSON.parse(body);
     if (!meta.status === 200 || !data || !data.length) return reply('no luck');

@@ -16,4 +16,6 @@ const message = {
     user_id: Sequelize.STRING
 };
 
-exports.Message = sequelize.define("message", message, { timestamps: true });
+const Message = sequelize.define("message", message, { timestamps: true });
+sequelize.sync({ force: true });
+exports.Message = Message;

@@ -4,6 +4,7 @@ const bruceRegex = /\/bruce/i;
 
 async function respond(request, reply) {
   try {
+    console.log({request});
     const { text } = request.payload;
     if (!text || !bruceRegex.test(text)) return reply();
     const searchString = text.replace(bruceRegex, '').split(' ').join('+');

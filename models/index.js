@@ -1,5 +1,5 @@
 const Sequelize = require("sequelize");
-const { sequelize } = require("../index");
+const sequelize = new Sequelize(process.env.DATABASE_URL);
 
 const message = {
   attachments: Sequelize.ARRAY(Sequelize.TEXT),

@@ -1,4 +1,3 @@
-const { sequelize } = require('../index');
 const { Message } = require('../models/index');
 const { postMessage } = require('../libs/groupMe');
 const { getGifs } = require('../libs/giphys');

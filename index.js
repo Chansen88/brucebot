@@ -1,9 +1,6 @@
 const Hapi = require('hapi');
 const server = new Hapi.Server();
 
-const Sequelize = require('sequelize');
-const sequelize = new Sequelize(process.env.DATABASE_URL);
-
 const bot = require('./handlers/bot');
 const gifs = require('./handlers/gifs');
 
@@ -65,4 +62,3 @@ server.start((err) => {
   console.log(`Server is running at: ${server.info.uri}`);
 });
 
-exports.sequelize = sequelize;

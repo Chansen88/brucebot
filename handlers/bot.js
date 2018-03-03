@@ -32,8 +32,22 @@ async function post(request, reply) {
   }
 };
 
-async function saveMessage(message) {
+async function saveMessage(payload) {
   return new Promise((resolve, reject) => {
+    const message = {
+      id: payload.id,
+      attachments: payload.attachments,
+      avatar_url: payload.avatar_url,
+      created_at: payload.created_at,
+      group_id: payload.group_id,
+      name: payload.name,
+      sender_id: payload.sender_id,
+      sender_type: payload.sender_type,
+      source_guid: payload.source_guid,
+      system: payload.system,
+      text: payload.text,
+      user_id: payload.user_id
+    };
     Message.create(message)
       .then((savedMessage) => {
         console.log(savedMessage);

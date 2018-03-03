@@ -17,5 +17,5 @@ const message = {
 };
 
 const Message = sequelize.define("message", message, { timestamps: true });
-sequelize.sync({ force: true });
+sequelize.sync();
 exports.Message = Message;
